@@ -40,6 +40,16 @@ namespace _09_Portfolio
             return Total;
         }
 
+        public static double TotalValue(Asset[] Stocks)
+        {
+            double Total = 0;
+            foreach (Asset item in Stocks)
+            {
+                Total += item.GetValue();
+            }
+            return Total;
+        }
+
         public override string ToString()
         {
             return "Stock[symbol=" + Symbol + ",pricePerShare=" + PricePerShare.ToString().Replace(",",".") + ",numShares=" + NumShares + "]";
